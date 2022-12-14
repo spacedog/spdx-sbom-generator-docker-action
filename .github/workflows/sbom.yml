@@ -8,4 +8,4 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
       - name: Generate SBOM
-        uses: spacedog/spdx-sbom-generator-docke-action@master
+        uses: spacedog/spdx-sbom-generator-docker-action@master

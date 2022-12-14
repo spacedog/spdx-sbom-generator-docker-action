@@ -29,7 +29,6 @@ inputs:
     description:  'Alternate path for the global settings file for Java Maven'
     required: true
     default: ""
-outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'

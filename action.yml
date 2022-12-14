@@ -1,0 +1,42 @@
+# action.yml
+name: 'spdx-sbom-generator-docker-action'
+description: 'Runs spdx-sbom-generator cli'
+branding:
+  icon: 'command'
+  color: 'red'
+inputs:
+  include-license-text:
+    description: 'Include full license text'
+    required: true
+    default: false
+  output-dir:
+    description: 'Directory to write output file to'
+    required: true
+    default: '.'
+  path:
+    description: 'The path to package file or the path to a directory which will be recursively analyzed for the package files'
+    required: true
+    default: '.'
+  schema:
+    description: 'Target schema version'
+    required: true
+    default: '2.2'
+  format:
+    description: 'Output file format'
+    required: true
+    default: 'spdx'
+  global-settings:
+    description:  'Alternate path for the global settings file for Java Maven'
+    required: true
+    default: ""
+outputs:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '--include-license-text ${{ inputs.include-license-text }}'
+    - '--output-dir ${{ inputs.output-dir }}'
+    - '--path ${{ inputs.path }}'
+    - '--schema ${{ inputs.schema }}'
+    - '--format ${{ inputs.format }}'
+    - '--global-settings ${{ inputs.global-setting }}'

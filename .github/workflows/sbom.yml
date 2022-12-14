@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  sbom:
+    runs-on: ubuntu-latest
+    name: SPDX SBOM Generator
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Generate SBOM
+        uses: spacedog/spdx-sbom-generator-docke-action@master

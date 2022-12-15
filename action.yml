@@ -7,8 +7,8 @@ branding:
 inputs:
   include-license-text:
     description: 'Include full license text'
-    required: true
-    default: false
+    required: false
+    default: ""
   output-dir:
     description: 'Directory to write output file to'
     required: true
@@ -33,7 +33,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '--include-license-text ${{ inputs.include-license-text }}'
+    - '${{ inputs.include-license-text }}'
     - '--output-dir ${{ inputs.output-dir }}'
     - '--path ${{ inputs.path }}'
     - '--schema ${{ inputs.schema }}'

@@ -10,4 +10,5 @@ jobs:
       - name: Generate SBOM
         uses: spacedog/gh-action-spdx-sbom-generator@main
         with:
+          arch: 386
           version: 0.0.15

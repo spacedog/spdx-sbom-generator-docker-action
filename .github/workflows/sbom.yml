@@ -8,6 +8,6 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
       - name: Generate SBOM
-        uses: spacedog/gh-action-spdx-sbom-generator@master
+        uses: spacedog/gh-action-spdx-sbom-generator@main
         with:
           version: 0.0.15

@@ -12,6 +12,6 @@ jobs:
         with:
           arch: 386
           version: 0.0.15
-          commands: -f json -o /tmp/out
+          commands: -p example -o /tmp/out
       - name: Output SBOM reports
         run: cat /tmp/out/*.json >> $GITHUB_OUTPUT

@@ -9,6 +9,8 @@ jobs:
         uses: actions/checkout@v2
       - name: NPM install
         run: npm install
+      - name: Create out directory
+        run: mkdir -p /tmp/out
       - name: Generate SBOM
         uses: spacedog/gh-action-spdx-sbom-generator@main
         with:

@@ -7,11 +7,13 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
+      - name: NPM install
+        run: npm install example
       - name: Generate SBOM
         uses: spacedog/gh-action-spdx-sbom-generator@main
         with:
           arch: 386
           version: 0.0.15
-          commands: -p example -o /tmp/out
+          commands: -p ./example -o /tmp/out
       - name: Output SBOM reports
-        run: cat /tmp/out/*.json >> $GITHUB_OUTPUT
+        run: cat /tmp/out/*.spdx >> $GITHUB_OUTPUT

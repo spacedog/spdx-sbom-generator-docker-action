@@ -1,0 +1,34 @@
+{
+  "name": "api-gw",
+  "description": "LFX Express API Gateway",
+  "repository": {},
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "start": "node --require ./env_setup.js server.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.2",
+    "dd-trace": "^0.36.6",
+    "express-gateway": "^1.12.1",
+    "express-gateway-plugin-lambda": "^1.0.0",
+    "express-gateway-plugin-rewrite": "^1.2.1"
+  },
+  "resolutions": {
+    "ansi-regex": "^6.0.1",
+    "decode-uri-component": "^0.2.1",
+    "express-gateway/yeoman-environment/globby/fast-glob/glob-parent": "^5.1.2",
+    "express-gateway/proxy-agent/pac-proxy-agent/pac-resolver": "^5.0.0",
+    "express-gateway/rate-limit-redis/redis": "^3.1.1",
+    "express-gateway/ejs": "^3.1.7",
+    "express-gateway/yeoman-environment/mem-fs-editor/ejs": "^3.1.7",
+    "express-gateway/yeoman-generator/mem-fs-editor/ejs": "^3.1.7",
+    "file-type": "^17.1.3",
+    "got": "^11.8.5",
+    "moment": "^2.29.4",
+    "passport": "^0.6.0",
+    "unset-value": "^2.0.1",
+    "vm2": "^3.9.11"
+  }
+}
